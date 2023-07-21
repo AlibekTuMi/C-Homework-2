@@ -32,28 +32,46 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-Console.WriteLine("Введите число");
-int number1= Convert.ToInt32 (Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int number1= Convert.ToInt32 (Console.ReadLine());
+
+// Console.WriteLine("Введите число");
+// int number2= Convert.ToInt32 (Console.ReadLine());
+
+// Console.WriteLine("Введите число");
+// int number3= Convert.ToInt32 (Console.ReadLine());
+
+// int max = number1;
+// int cou = 0;
+// while(cou < 2)
+// {
+//     if (number2 > max)
+//     {
+//     max = number2;
+//     }
+//     else if(number3 > max)
+//     {
+//     max = number3;
+//     }
+//     cou++;
+// }
+
+// Console.WriteLine(max);
+
+
+// Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
 
 Console.WriteLine("Введите число");
-int number2= Convert.ToInt32 (Console.ReadLine());
+int number= Convert.ToInt32 (Console.ReadLine());
 
-Console.WriteLine("Введите число");
-int number3= Convert.ToInt32 (Console.ReadLine());
-
-int max = number1;
-int cou = 0;
-while(cou < 2)
+if (number% 2 == 0)
 {
-    if (number2 > max)
-    {
-    max = number2;
-    }
-    else if(number3 > max)
-    {
-    max = number3;
-    }
-    cou++;
+    Console.WriteLine("Является чётным");
 }
-
-Console.WriteLine(max);
+else
+{
+    Console.WriteLine("Является нечётным");
+}
