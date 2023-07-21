@@ -64,14 +64,33 @@
 // -3 -> нет
 // 7 -> нет
 
+// Console.WriteLine("Введите число");
+// int number= Convert.ToInt32 (Console.ReadLine());
+
+// if (number% 2 == 0)
+// {
+//     Console.WriteLine("Является чётным");
+// }
+// else
+// {
+//     Console.WriteLine("Является нечётным");
+// }
+
+// Напишите программу, которая на вход принимает число (N), а на выходе показывает 
+// все чётные числа от 1 до N.
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
 Console.WriteLine("Введите число");
 int number= Convert.ToInt32 (Console.ReadLine());
 
-if (number% 2 == 0)
-{
-    Console.WriteLine("Является чётным");
-}
-else
-{
-    Console.WriteLine("Является нечётным");
-}
+int count = 1;
+
+while (count <= number)
+    {
+        if (count%2 == 0)
+        {
+            Console.Write(count+" ");
+        }
+        count++;
+    }
