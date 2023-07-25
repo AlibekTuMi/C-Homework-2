@@ -50,17 +50,38 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.Readline());
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.Readline());
+
+// Console.WriteLine("Введите число");
+// int num1 = Convert.ToInt32(Console.Readline());
+
+// if(num % num1 == 0)
+// {
+//     Console.WriteLine("Числа кратные");
+// }
+// else
+// {
+//     Console.WriteLine("Числа не кратные, остаток равен" + num % num1")
+
+// Напишите программу, которая принимает на вход число и проверяет,
+// кратно ли оно одновременно 7 и 23.
+
+// 14->нет
+// 46->нет
+// 161->да
+
+// && - все условия должны выполниться
+// || - хотя бы одно
 
 Console.WriteLine("Введите число");
-int num1 = Convert.ToInt32(Console.Readline());
+int num = Convert.ToInt32(Console.ReadLine());
 
-if(num % num1 == 0)
+if ((num % 7 == 0) || (num % 23 ==0))
 {
-    Console.WriteLine("Числа кратные");
+    Console.WriteLine("Кратные");
 }
 else
 {
-    Console.WriteLine("Числа не кратные, остаток равен" + num % num1);
+    Console.WriteLine("Не кратные");
 }
