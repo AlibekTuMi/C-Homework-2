@@ -6,21 +6,37 @@
 // 12 -> 2
 // 85 -> 8
 
-int num = new Random().Next(10, 99);
+// int num = new Random().Next(10, 99);
+// Console.WriteLine(num);
+
+// int num1 = num / 10;
+// int num2 = num % 10;
+
+// if(num1>num2)
+// {
+//     Console.WriteLine("Число" + num1+ "больше чем"); // канкатинация
+// }
+// else if(num1==num2)
+// {
+//     Console.WriteLine("Числа равны");
+// }
+// else
+// {
+//     Console.WriteLine($"Число {num2} больше чем");  // интерполяция
+// }
+
+
+// Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
+
+// 456->46
+// 782->72
+// 918->98
+
+int num = new Random().Next(100, 1000);
 Console.WriteLine(num);
 
-int num1 = num / 10;
+int num1 = num / 100;
 int num2 = num % 10;
+int result = num1 * 10 + num2;
 
-if(num1>num2)
-{
-    Console.WriteLine("Число" + num1+ "больше чем"); // канкатинация
-}
-else if(num1==num2)
-{
-    Console.WriteLine("Числа равны");
-}
-else
-{
-    Console.WriteLine($"Число {num2} больше чем");  // интерполяция
-}
+Console.WriteLine(result);
