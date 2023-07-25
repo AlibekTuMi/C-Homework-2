@@ -74,14 +74,37 @@
 // && - все условия должны выполниться
 // || - хотя бы одно
 
-Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-if ((num % 7 == 0) || (num % 23 ==0))
+// if ((num % 7 == 0) || (num % 23 ==0))
+// {
+//     Console.WriteLine("Кратные");
+// }
+// else
+// {
+//     Console.WriteLine("Не кратные");
+// }
+
+// Напишите программу, которая принимает на вход 2 числа и
+// проверяет, является ли одно число квадратом другого.
+
+// 5, 25->да
+// -4, 16->да
+// 25, 5->да
+// 8, 9->нет
+
+Console.WriteLine("Введите число");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+if (num1==num2*num2 || num2 == num1*num1)
 {
-    Console.WriteLine("Кратные");
+    Console.WriteLine("является");
 }
 else
 {
-    Console.WriteLine("Не кратные");
+    Console.WriteLine("не является");
 }
