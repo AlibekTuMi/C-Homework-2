@@ -3,6 +3,29 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+// 1 решение с применением функции
+
+// Console.WriteLine("Введите возводимое число");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число, в которое хотите возвести");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// int GetMultiply()
+// {    
+//     int sum = 1;
+
+//     for (int i = 0; i < num2; i++)
+//     {
+//         sum = sum * num1;
+//     }
+//     return sum;
+// }
+
+// Console.WriteLine(GetMultiply());
+
+// 2 решение без применения функции
+
 // Console.WriteLine("Введите возводимое число : ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
 
@@ -42,18 +65,35 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 
-int [] array = new int[8];
-GetArray();
+// int [] array = new int[8];
+// GetArray();
 
-void GetArray()
-{
-    for (int i = 0; i < array.Length; i++)
+// void GetArray()
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(0,50);        
+//         Console.Write(array[i]+" ");
+//     }
+// }
+
+
+Console.WriteLine("Введите возводимое число");
+int num1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число, в которое хотите возвести");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+int GetMultiply()
+{    
+    int sum = 1;
+
+    for (int i = 0; i < num2; i++)
     {
-        array[i] = new Random().Next(0,50);        
-        Console.Write(array[i]+" ");
+        sum = sum * num1;
     }
+    return sum;
 }
 
-
-
+Console.WriteLine(GetMultiply());
 
