@@ -43,21 +43,21 @@
 // 82 -> 10
 // 9012 -> 12
 
-// Console.WriteLine("Введите число : ");
-// int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число : ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-// int GetSumNum()
-// {
-//     int sum = 0; 
-//     while (num > 0) 
-//     {
-//         sum += num % 10;
-//         num /= 10;
-//     }
-//     return sum;
-// }
+int GetSumNum()
+{
+    int sum = 0; 
+    while (num > 0) 
+    {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
 
-// Console.WriteLine(GetSumNum());
+Console.WriteLine(GetSumNum());
 
 
 // Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
@@ -77,23 +77,4 @@
 //     }
 // }
 
-
-Console.WriteLine("Введите возводимое число");
-int num1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите число, в которое хотите возвести");
-int num2 = Convert.ToInt32(Console.ReadLine());
-
-int GetMultiply()
-{    
-    int sum = 1;
-
-    for (int i = 0; i < num2; i++)
-    {
-        sum = sum * num1;
-    }
-    return sum;
-}
-
-Console.WriteLine(GetMultiply());
 
