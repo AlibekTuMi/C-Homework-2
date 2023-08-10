@@ -47,29 +47,40 @@
 // }
 // System.Console.WriteLine();
 // System.Console.Write("Сумма чисел на нечётных позициях " +sum);
-
-
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов 
 // массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
 
-double[] array = new double[4.43, 5.78, 7.62, 5.45, 12.2, 24.8, 13.1];
+double[] array = new double[]{4.43, 5.78, 7.62, 5.45, 12.2, 24.8, 13.1};
 
-double Max = Max[i];
-double Min = Min[i];
+double max = array [0];
+double min = array [0];
 
 for (int i = 0; i < array.Length; i++)
 {
-    if (i > i + 1)
+    // double r = Convert.ToDouble(x.Next(0, 100) / 100.00);
+    // array[i] = new Random().Next(0, 100) * r;
+    if (array[i]>max)
     {
-        i = Max;
+        max = array[i];
 
-    }                                       //          КОД НЕ РАБОТАЕТ, НЕ ЗНАЮ ЧТО ДЕЛАЬ С DOUBLE!!!!!!!!!!!
-    else if (i < i + 1)
+    }                                       
+    if (array[i]<min)
     {
-        i = Min;
+        min = array[i];
+    }
+    System.Console.Write(array[i]);
+    if (i!=array.Length - 1)
+    {
+        System.Console.Write("; ");
     }
 }
-double result = Max - Min;
+double result = max - min;
+System.Console.WriteLine();
+System.Console.WriteLine("Максимальное число " +max);
+System.Console.WriteLine("Минимальное число " +min);
 System.Console.WriteLine(result);
+
+
+
