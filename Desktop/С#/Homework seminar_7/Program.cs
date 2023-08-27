@@ -6,23 +6,23 @@
 // 8 7,8 -7,1 9
 
 
-System.Console.WriteLine("Введите количество строк массива");
-int rows = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите количество строк массива");
+// int rows = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Введите количество столбцов массива");
-int colomns = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите количество столбцов массива");
+// int colomns = Convert.ToInt32(Console.ReadLine());
 
-double [,] matrix = new double[rows,colomns];
+// double [,] matrix = new double[rows,colomns];
 
-for (int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        matrix[i,j] = new Random().NextDouble()*10;
-        Console.Write(matrix[i,j]+" ");
-    }
-    System.Console.WriteLine();
-}
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix[i,j] = new Random().NextDouble()*10;
+//         Console.Write(matrix[i,j]+" ");
+//     }
+//     System.Console.WriteLine();
+// }
 
 
 
@@ -94,3 +94,39 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 // 5 9 2 3
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+
+System.Console.WriteLine("Введите количество строк");
+int rows = Convert.ToInt32(Console.ReadLine());
+
+System.Console.WriteLine("Введите количество столбцов");
+int colomns = Convert.ToInt32(Console.ReadLine());
+
+int[,] matrix = new int[rows,colomns];
+
+for (int i = 0; i < matrix.GetLength(0); i++)
+{
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        matrix[i,j] = new Random().Next(0,10);
+        Console.Write(matrix[i,j]+" ");
+    }
+    System.Console.WriteLine();
+}
+
+int sum = 0;
+double average = 0;
+
+for (int j = 0; j < matrix.GetLength(1); j++)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        sum+=matrix[i,j];
+    }
+    average = (double)sum / rows;
+    System.Console.WriteLine($"Среднее арифметическое столбца {j + 1} равно {average}" );
+    sum = 0;
+}
+
+
+
