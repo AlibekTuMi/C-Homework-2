@@ -40,25 +40,27 @@
 
 
 
-// int[,] matrix = new int[5,6];
+// int[,] matrix = new int[6,8];
 
 // for (int i = 0; i < matrix.GetLength(0); i++)
 // {
 //     for (int j = 0; j < matrix.GetLength(1); j++)
 //     {
-//         matrix[i,j] = new Random().Next(0,10);
+//         matrix[i,j] = new Random().Next(0,51);
 //         Console.Write(matrix[i,j]+" ");
 //     }
 //     System.Console.WriteLine();
 // }
 // System.Console.WriteLine();
 
-// System.Console.WriteLine("Введие номер строки");
+
+
+// System.Console.WriteLine("Введие номер строки от 0 до 5");
 // int rows = Convert.ToInt32(Console.ReadLine());
 
 // if (rows >= 0 && rows < 6)
 // {
-//     System.Console.WriteLine("Введие номер столбца");
+//     System.Console.WriteLine("Введие номер столбца от 0 до 7");
 //     int colomns = Convert.ToInt32(Console.ReadLine());
 
 //     if (colomns >= 0 && colomns < 7)
@@ -77,13 +79,15 @@
 //     else
 //     {
 //         System.Console.WriteLine("Такого номера столбца в массиве нет");
+//         return;
 //     }
 // }
 // else
 // {
 //     System.Console.WriteLine("Такого номера строки в массиве нет");
+//     return;
 // }
-
+// System.Console.WriteLine();
 
 
 // Задайте двумерный массив из целых чисел. Найдите среднее арифметическое 
@@ -96,37 +100,73 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-System.Console.WriteLine("Введите количество строк");
-int rows = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите количество строк");
+// int rows = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Введите количество столбцов");
-int colomns = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите количество столбцов");
+// int colomns = Convert.ToInt32(Console.ReadLine());
 
-int[,] matrix = new int[rows,colomns];
+// int[,] matrix = new int[rows,colomns];
+
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix[i,j] = new Random().Next(0,10);
+//         Console.Write(matrix[i,j]+" ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// int sum = 0;
+// double average = 0;
+
+// for (int j = 0; j < matrix.GetLength(1); j++)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         sum+=matrix[i,j];
+//     }
+//     average = (double)sum / rows;
+//     System.Console.WriteLine($"Среднее арифметическое столбца {j + 1} равно {average}" );
+//     sum = 0;
+// }
+
+
+// Отдельно создал программу, которая создаёт двумерный массив случайных чисел, и запрашивает число на проверку есть оно или нет в массиве,
+// если есть, то пишет где находится, если нет, то говорит что его нет.
+
+
+int[,] matrix = new int[6,8];
 
 for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        matrix[i,j] = new Random().Next(0,10);
+        matrix[i,j] = new Random().Next(0,51);
         Console.Write(matrix[i,j]+" ");
     }
     System.Console.WriteLine();
 }
+System.Console.WriteLine();
 
-int sum = 0;
-double average = 0;
+System.Console.WriteLine("Введие запрашиваемое число");
+int num = Convert.ToInt32(Console.ReadLine());
 
-for (int j = 0; j < matrix.GetLength(1); j++)
+bool sio = false;
+for (int i = 0; i < matrix.GetLength(0); i++)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        sum+=matrix[i,j];
+        
+        if (num == matrix[i,j])
+        {
+            Console.WriteLine($"Такое число есть в строке {i + 1}, столбце {j + 1}");
+            sio = true;
+        }
     }
-    average = (double)sum / rows;
-    System.Console.WriteLine($"Среднее арифметическое столбца {j + 1} равно {average}" );
-    sum = 0;
 }
-
-
-
+if (sio == false)
+{
+    System.Console.WriteLine("Такого числа нет");
+}
