@@ -28,31 +28,72 @@
 // M = 4; N = 8 -> 30
 
 
-Console.WriteLine("Введите первое число");
-int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число");
+// int num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите первое число");
-int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число");
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1>num2)
+// if (num1>num2)
+// {
+//     Console.WriteLine("Первое число должно быть меньше второго!");
+// }
+
+// System.Console.WriteLine(PrintNum(num1,num2));
+
+// string PrintNum(int num1,int num2)
+// {
+//     if (num1 == num2)
+//     {
+//         return num1.ToString();
+//     }
+//     return (num1 + " " + PrintNum(num1 + 1, num2));
+// }
+// int sum = 0;
+// while (num1<=num2)
+// {
+//     sum+=num1;
+//     num1++;
+// }
+// System.Console.WriteLine($"Сумма чисел массива равна {sum}");
+
+
+// Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два 
+// неотрицательных числа m и n.
+// m = 2, n = 3->A(m,n) = 9
+// m = 3, n = 2->A(m,n) = 29
+
+Console.WriteLine("Введите число m");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число n");
+int m = Convert.ToInt32(Console.ReadLine());
+
+A(m, n);
+            
+static int A(int m, int n)
 {
-    Console.WriteLine("Первое число должно быть меньше второго!");
-}
-
-System.Console.WriteLine(PrintNum(num1,num2));
-
-string PrintNum(int num1,int num2)
-{
-    if (num1 == num2)
+    if (m == 0)
     {
-        return num1.ToString();
-    }
-    return (num1 + " " + PrintNum(num1 + 1, num2));
+        return n + 1;
+    } 
+    else if (m != 0 && n == 0)
+    {
+        return A(m - 1, 1);
+    } 
+    else if (m != 0 && n != 0)
+    {
+        return A(m - 1, A(m, n - 1));
+    } 
+    return A(m,n);
 }
-int sum = 0;
-while (num1<=num2)
-{
-    sum+=num1;
-    num1++;
-}
-System.Console.WriteLine($"Сумма чисел массива равна {sum}");
+Console.WriteLine(A(m,n));
+
+Последняя задача сложная на понимание. Насколько я понял, это связано с 
+записью и сохранением информации, и определением, какое количество памяти нужно
+для определенного объёма.
+
+
+
+
+
